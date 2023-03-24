@@ -1,2 +1,2 @@
 # admin-dashboard
- theodinproject.com - intermediate project 1
+ theodinproject.com - intermediate project 2
