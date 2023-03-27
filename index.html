@@ -7,26 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="admin dashboard form intermediate project 2">
     <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
     <title>Admin Dashboard</title>
 </head>
 
 <body> <!-- Use grid for ALL -->
     <nav>
         <ul>
-            <li id="page-title"><img>
+            <li class="page-title"><span class="mdi mdi-menu-open" id="open-menu"></span>
                 <h1>Dashboard</h1>
             </li>
-            <li></li>
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
-            <li></li>
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li>
+            <li class="row-gap"></li>
+            <li class="home menu"><span class="mdi mdi-home-export-outline"></span></span></span>
+                <p class="menu">Home</p>
+            </li>
+            <li class="profile menu"><span class="mdi mdi-card-account-details-outline"></span>
+                <p class="menu">Profile</p>
+            </li>
+            <li class="messages menu"><span class="mdi mdi-message-badge-outline"></span>
+                <p class="menu">Messages</p>
+            </li>
+            <li class="history menu"><span class="mdi mdi-clock-outline"></span>
+                <p class="menu">History</p>
+            </li>
+            <li class="tasks menu"><span class="mdi mdi-format-list-checks"></span>
+                <p class="menu">Tasks</p>
+            </li>
+            <li class="communities menu"><span class="mdi mdi-account-group-outline"></span>
+                <p class="menu">Communities</p>
+            </li>
+            <li class="row-gap"></li>
+            <li class="settings menu"><span class="mdi mdi-cogs"></span></span></span>
+                <p class="menu">Settings</p>
+            </li>
+            <li class="support menu"><span class="mdi mdi-head-question-outline"></span>
+                <p class="menu">Support</p>
+            </li>
+            <li class="privacy menu"><span class="mdi mdi-incognito"></span>
+                <p class="menu">Privacy</p>
+            </li>
         </ul>
     </nav>
     <header id="welcome-bar">
