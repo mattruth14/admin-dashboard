@@ -28,7 +28,7 @@ nav {
     grid-area: a;
 }
 
-ul {
+nav>ul {
     display: grid;
     grid-auto-rows: min-content;
     list-style: none;
@@ -39,16 +39,12 @@ ul {
     /* ^align icons & text to center; shrink nav as when expanding to 16:9 it is way too big column wise */
 }
 
-li:first-child {
+nav li:first-child {
     display: flex;
     align-items: center;
     gap: 10px;
     padding-inline-start: 35px;
     padding-block-start: 15px;
-}
-
-li {
-    vertical-align: top;
 }
 
 .menu {
@@ -223,6 +219,168 @@ input {
 /* ---------- MAIN ---------- */
 
 main {
+    overflow-y: scroll;
     background-color: #e2e8f0;
     grid-area: c;
+    padding: 60px 30px 60px 20px;
+    display: grid;
+    gap: 40px 25px;
+    grid-template-columns: 2.8fr 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+        "projects announcements"
+        "projects trending";
 }
+
+/* main>p {
+    text-align: justify;
+} */
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: min-content;
+    grid-auto-flow: dense;
+    gap: 30px 25px;
+    grid-area: projects;
+}
+
+#projects p {
+    color: #636363;
+}
+
+#projects::before {
+    content: "Your Projects";
+    position: absolute;
+    top: -35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#projects>div:nth-child(3) {
+    grid-row: span 2;
+}
+
+#projects>div:nth-child(5) {
+    grid-row: span 2;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project {
+    background: linear-gradient(90deg, #f0b429 0%, #f0b429 2.5%, white 2.5%, white 100%);
+    border-radius: 9px;
+    padding: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 250px;
+    row-gap: 10px;
+}
+
+.project>article {
+    display: flex;
+    flex-flow: column;
+}
+
+article>figure {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 3px;
+}
+
+figcaption {
+    align-self: flex-start;
+    padding-inline-start: 15px;
+    font-size: 0.7rem;
+}
+
+figcaption>a {
+    text-decoration: none;
+    color: #636363;
+}
+
+.project img {
+    width: 90%;
+    height: auto;
+    margin-block-start: 20px;
+    border: 5px solid #f0b429;
+    border-radius: 9px;
+}
+
+.project-icons {
+    display: flex;
+    align-self: flex-end;
+    margin-block-start: auto;
+    gap: 15px;
+}
+
+.project-icons>span {
+    cursor: pointer;
+}
+
+#announcement p,
+#trendings p {
+    color: #636363;
+    font-size: 0.8rem;
+}
+
+#announcement ul,
+#trendings ul {
+    list-style: none;
+}
+
+#announcements {
+    grid-area: announcements;
+    display: grid;
+    grid-template-rows: min-content;
+}
+
+#announcement {
+    background-color: white;
+    border-radius: 9px;
+    padding: 30px;
+}
+
+#announcement ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+#announcement p {
+    padding-block-end: 20px;
+    border-block-end: 1px #636363 solid;
+}
+
+#last p {
+    padding-block-end: 0px;
+    border-block-end: none;
+}
+
+#trendings {
+    grid-area: trending;
+    display: grid;
+    grid-template-rows: min-content;
+}
+
+#trending {
+    background-color: white;
+    border-radius: 9px;
+}
+
+
+
+
+
+
+
+/* ---------- @ RULES ---------- */
