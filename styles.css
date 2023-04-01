@@ -8,7 +8,7 @@
 }
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template:
         "a b" min-content
@@ -217,9 +217,14 @@ input {
 
 
 
+
+
+
+
 /* ---------- MAIN ---------- */
 
 main {
+    overflow-y: auto;
     background-color: #e2e8f0;
     grid-area: c;
     padding: 60px 30px 60px 20px;
@@ -331,16 +336,12 @@ figcaption>a {
     cursor: pointer;
 }
 
-#announcement p,
-#trendings p {
-    color: #636363;
-    font-size: 0.8rem;
-}
 
-#announcement ul,
-#trendings ul {
-    list-style: none;
-}
+
+
+
+
+
 
 #announcements {
     position: relative;
@@ -355,6 +356,21 @@ figcaption>a {
     top: -35px;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+#announcement p {
+    color: #636363;
+    font-size: 0.8rem;
+}
+
+#announcement ul,
+#trendings ul {
+    list-style: none;
 }
 
 #announcement {
@@ -373,12 +389,20 @@ figcaption>a {
 #announcement p {
     padding-block-end: 20px;
     border-block-end: 1px #bdb8b8 solid;
+    /* animation - #f0b429 dot that zips across length of border (ease-in slow then goes fast then ease-out */
 }
 
 #last p {
     padding-block-end: 0px;
     border-block-end: none;
 }
+
+
+
+
+
+
+
 
 #trendings {
     position: relative;
@@ -400,7 +424,31 @@ figcaption>a {
     border-radius: 9px;
     padding: 30px;
     box-shadow: 0 4px 6px 0px rgb(197, 191, 191), 0 2px 4px -1px rgb(191, 191, 191);
-    /* 20px gap on rows */
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: min-content 1fr min-content;
+    gap: 30px 15px;
+    align-items: center;
+}
+
+#trending img {
+    width: 45px;
+}
+
+#trending p {
+    color: #000000;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: pre-line;
+}
+
+#trending>p>span {
+    color: #636363;
+    font-weight: initial;
+}
+
+#trending span {
+    color: #f0b429;
 }
 
 

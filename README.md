@@ -9,3 +9,11 @@ Photo by <a href="https://unsplash.com/@kmuza?utm_source=unsplash&utm_medium=ref
 
 Photo by <a href="https://unsplash.com/@nordwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NordWood Themes</a> on <a href="https://unsplash.com/photos/yyMJNPgQ-X8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
+<a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Vectors Market - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/man" title="man icons">Man icons created by Roundicons - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/profile" title="profile icons">Profile icons created by Vectors Market - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+
