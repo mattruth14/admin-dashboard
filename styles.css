@@ -12,8 +12,8 @@ body {
     display: grid;
     grid-template:
         "a b" min-content
-        "a c" 4.5fr
-        / 1fr 4fr;
+        "a c" 1fr
+        / max-content 1fr;
 }
 
 
@@ -26,6 +26,7 @@ body {
 nav {
     background-color: #1992d4;
     grid-area: a;
+    padding: 10px 30px;
 }
 
 nav>ul {
@@ -36,6 +37,7 @@ nav>ul {
     font-size: 1.25rem;
     font-weight: 600;
     color: white;
+    justify-content: center;
     /* ^align icons & text to center; shrink nav as when expanding to 16:9 it is way too big column wise */
 }
 
@@ -43,18 +45,12 @@ nav li:first-child {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-inline-start: 35px;
-    padding-block-start: 15px;
 }
 
 .menu {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.menu>.mdi {
-    padding-inline-start: 50px;
 }
 
 .mdi {
@@ -92,7 +88,7 @@ h1 {
 header {
     background-color: white;
     padding-inline: 40px 60px;
-    padding-block-end: 20px;
+    padding-block: 10px;
     grid-area: b;
     display: grid;
     align-items: center;
@@ -167,10 +163,11 @@ header .mdi {
     align-items: center;
     justify-self: flex-start;
     gap: 15px;
+    padding-inline-end: 20px;
+    margin-block-end: 5px;
     grid-column: 1 / -2;
     background-color: #e2e8f0;
     border-radius: 30px;
-    padding-inline-end: 20px;
     box-shadow: 0 4px 6px 0px rgb(197, 191, 191), 0 2px 4px -1px rgb(191, 191, 191);
 }
 
@@ -458,3 +455,36 @@ h4 {
 
 
 /* ---------- @ RULES ---------- */
+
+@media (max-width: 1000px) {
+    nav {
+        display: none;
+    }
+    body {
+        grid-template:
+        "b" min-content
+        "c" 1fr
+        / 100vw;
+    }
+}
+
+@media (max-width: 750px) {
+    nav {
+        display: none;
+    }
+    .search, .inputs, .notifs {
+        justify-self: center;
+    }
+    .intro {
+        display: none;
+    }
+    main {
+        grid-template-columns: 90%;
+        grid-auto-rows: min-content;
+        grid-template-areas:
+            "projects"
+            "announcements"
+            "trending";
+            justify-content: center;
+    }
+}
