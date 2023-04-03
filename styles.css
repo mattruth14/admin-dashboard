@@ -568,13 +568,20 @@ h4:hover {
         display: none;
     }
 
-    .search,
-    .inputs,
-    .notifs {
-        justify-self: center;
+    header {
+        grid-template-columns: 1fr min-content;
+        padding: 20px 30px;
+        gap: 10px;
     }
 
-    .intro {
+    .search {
+        justify-self: flex-start;
+    }
+
+    #notif-icon,
+    .notifs>p,
+    .intro,
+    .inputs {
         display: none;
     }
 
