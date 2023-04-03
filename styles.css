@@ -7,6 +7,10 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+    --card-background: ;
+}
+
 body {
     height: 100vh;
     display: grid;
@@ -38,13 +42,25 @@ nav>ul {
     font-weight: 600;
     color: white;
     justify-content: center;
-    /* ^align icons & text to center; shrink nav as when expanding to 16:9 it is way too big column wise */
 }
 
 nav li:first-child {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+nav li:not(.page-title) {
+    transition: scale 0.5s;
+    transform-origin: 0;
+}
+
+nav li:hover:not(.page-title) {
+    scale: 1.1;
+}
+
+nav li:active:not(.page-title) {
+    color: #f0b429;
 }
 
 .menu {
@@ -62,20 +78,24 @@ h1 {
     font-size: 1.6rem;
 }
 
-
-
-/* menu icons */
-
 #open-menu {
     font-size: 60px;
+    transition: scale 0.5s, translate 1s;
+    transform-origin: center;
 }
 
+#open-menu:hover {
+    scale: 0.75;
+    translate: -20px
+}
 
-
-
+#open-menu:active {
+    color: #f0b429;
+}
 
 .row-gap {
     padding-block: 5px;
+    cursor: initial;
 }
 
 
@@ -117,7 +137,17 @@ header .mdi {
 
 #search-icon {
     font-size: 25px;
+}
+
+#search-icon:hover,
+#notif-icon:hover {
     cursor: pointer;
+    color: #636363;
+}
+
+#search-icon:active,
+#notif-icon:active {
+    color: #e04f5f;
 }
 
 .search-bar {
@@ -151,7 +181,15 @@ header .mdi {
     text-align: center;
     white-space: pre;
     font-weight: 600;
+}
+
+.notifs>p:hover {
     cursor: pointer;
+    color: #636363;
+}
+
+.notifs>p:active {
+    color: #e04f5f;
 }
 
 
@@ -206,7 +244,16 @@ input {
     width: 95px;
     font-weight: 700;
     font-size: 0.9rem;
+}
+
+input:hover {
     cursor: pointer;
+    background-color: #f0b429;
+}
+
+input:active {
+    cursor: pointer;
+    background-color: #000000;
 }
 
 
@@ -274,11 +321,6 @@ h2 {
     grid-row: span 2;
 }
 
-h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
 .project {
     background: linear-gradient(90deg, #f0b429 0%, #f0b429 2.5%, white 2.5%, white 100%);
     border-radius: 9px;
@@ -289,6 +331,17 @@ h3 {
     height: min-content;
     row-gap: 10px;
     box-shadow: 0 4px 6px 0px rgb(197, 191, 191), 0 2px 4px -1px rgb(191, 191, 191);
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: max-content;
+}
+
+.project h3:hover {
+    cursor: pointer;
+    text-decoration: #f0b429 underline 3px;
 }
 
 .project>article {
@@ -314,6 +367,8 @@ figcaption>a {
     color: #636363;
 }
 
+/* CHANGE IMGs TO GIFs & ADD ?HOVER? PLAYBACK */
+
 .project img {
     width: 90%;
     height: auto;
@@ -327,12 +382,45 @@ figcaption>a {
     align-self: flex-end;
     margin-block-start: auto;
     gap: 15px;
+    align-items: center;
 }
 
-.project-icons>span {
+.project-icons>.mdi:hover {
     cursor: pointer;
+    color: #636363;
 }
 
+.project-icons a {
+    display: flex;
+}
+
+svg {
+    stroke: black;
+    stroke-width: 2px;
+    fill: white;
+    width: auto;
+    height: 21px;
+}
+
+.project-icons a:link svg {
+    stroke: black;
+    fill: white;
+}
+
+.project-icons a:hover svg {
+    stroke: #f0b429;
+    fill: white;
+}
+
+.project-icons a:active svg {
+    stroke: #f0b429;
+    fill: #f0b429;
+}
+
+.project-icons a:visited svg {
+    stroke: #f0b429;
+    fill: #f0b429;
+}
 
 
 
@@ -358,6 +446,12 @@ figcaption>a {
 h4 {
     font-size: 0.9rem;
     font-weight: 700;
+    width: max-content;
+}
+
+h4:hover {
+    cursor: pointer;
+    text-decoration: #1992d4 underline wavy 1px;
 }
 
 #announcement p {
@@ -460,11 +554,12 @@ h4 {
     nav {
         display: none;
     }
+
     body {
         grid-template:
-        "b" min-content
-        "c" 1fr
-        / 100vw;
+            "b" min-content
+            "c" 1fr
+            / 100vw;
     }
 }
 
@@ -472,12 +567,17 @@ h4 {
     nav {
         display: none;
     }
-    .search, .inputs, .notifs {
+
+    .search,
+    .inputs,
+    .notifs {
         justify-self: center;
     }
+
     .intro {
         display: none;
     }
+
     main {
         grid-template-columns: 90%;
         grid-auto-rows: min-content;
@@ -485,6 +585,6 @@ h4 {
             "projects"
             "announcements"
             "trending";
-            justify-content: center;
+        justify-content: center;
     }
 }
