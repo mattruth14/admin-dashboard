@@ -5,9 +5,9 @@
 
 <a href="https://iconscout.com/icons/spongebob" target="_blank">Spongebob Icon</a> by <a href="https://iconscout.com/contributors/vincent-le-moign">Vincent Le moign</a> on <a href="https://iconscout.com">IconScout</a>
 
-Photo by <a href="https://unsplash.com/@kmuza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carlos Muza</a> on <a href="https://unsplash.com/backgrounds/apps/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Gif by <a href="https://giphy.com/madebydot/">Made by Dot</a> on <a href="https://giphy.com/gifs/2d-raag-madebydot-xT0GqeLAvs1EEgjRy8">GIPHY</a>
 
-Photo by <a href="https://unsplash.com/@nordwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NordWood Themes</a> on <a href="https://unsplash.com/photos/yyMJNPgQ-X8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Gif by <a href="https://giphy.com/loosekeys/">LooseKeys</a> on <a href="https://giphy.com/gifs/loosekeys-work-website-files-5k1Wu87CzkDfrx0Xwj">GIPHY</a>
 
 <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Vectors Market - Flaticon</a>
 
