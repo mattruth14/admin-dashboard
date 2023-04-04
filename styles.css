@@ -274,17 +274,15 @@ input:active {
 /* ---------- MAIN ---------- */
 
 main {
-    overflow-y: auto;
+    overflow: scroll;
     background-color: #e2e8f0;
     grid-area: c;
     padding: 60px 30px 60px 20px;
     display: grid;
     gap: 65px 25px;
     grid-template-columns: 2.8fr 1fr;
-    grid-template-rows: min-content 1fr;
     grid-template-areas:
-        "projects announcements"
-        "projects trending";
+        "projects announcements-trending";
 }
 
 /* main>p {
@@ -434,17 +432,22 @@ svg {
 
 
 
-#announcements {
-    position: relative;
-    grid-area: announcements;
+#announcements-trending {
+    grid-area: announcements-trending;
     display: grid;
-    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
+    gap: 65px;
 }
 
-#announcements::before {
+#announcement {
+    position: relative;
+}
+
+#announcement::before {
     content: "Announcements";
     position: absolute;
     top: -35px;
+    left: 0;
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -512,14 +515,11 @@ h4:hover {
 
 
 
-#trendings {
+#trending {
     position: relative;
-    grid-area: trending;
-    display: grid;
-    grid-template-rows: min-content;
 }
 
-#trendings::before {
+#trending::before {
     content: "Trending";
     position: absolute;
     top: -35px;
@@ -633,11 +633,9 @@ h4:hover {
 
     main {
         grid-template-columns: 90%;
-        grid-auto-rows: min-content;
         grid-template-areas:
             "projects"
-            "announcements"
-            "trending";
+            "announcements-trending";
         justify-content: center;
     }
 }
