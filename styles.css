@@ -562,12 +562,42 @@ h4:hover {
     font-weight: initial;
 }
 
-#trending span {
+#trending .mdi {
     color: #e04f5f;
+    position: relative;
+}
+
+#trending .profile-menu {
+    display: none;
+    position: absolute;
+    top: -45px;
+    left: -90px;
+    width: max-content;
+    background-color: black;
+    padding: 5px 6px;
+    border-radius: 12px;
+}
+
+#trending .profile-menu p {
+    color: white;
+    padding: 1px 4px;
+}
+
+#trending .profile-menu p:hover {
+    background-color: #e04f5f;
+    border-radius: 5px;
+}
+
+#trending .profile-menu p:active {
+    background-color: #f0b429;
 }
 
 #trending .mdi:hover {
     cursor: pointer;
+}
+
+#trending .mdi:hover .profile-menu {
+    display: initial;
 }
 
 
